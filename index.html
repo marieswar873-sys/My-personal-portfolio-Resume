@@ -6,46 +6,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap" rel="stylesheet">
   <style>
-    body {margin:0;background:#f8fafc;font-family:'Fira+Code',monospace;color:#223;}
-    .main-title{font-size:2.6rem;font-weight:700;letter-spacing:1px;color:#098ad9;margin-bottom:7px;}
-    .subtitle{font-size:1.11rem;color:#456;margin-bottom:18px;text-align:center;}
-    .profile-img{display:block;margin:22px auto 10px auto;height:110px;width:110px;border-radius:50%;object-fit:cover;box-shadow:0 0 20px #a2eaff;}
-    .profile-links{display:flex;justify-content:center;gap:16px;margin-bottom:19px;flex-wrap:wrap;}
-    .profile-links a{padding:9px 20px;border-radius:7px;color:#fff;background:#098ad9;text-decoration:none;font-size:1.05rem;font-weight:700;box-shadow:0 2px 11px #98e2f2c2;transition:.18s;display:inline-flex;align-items:center;gap:6px;}
-    .profile-links a:hover{background:#25d0f4;color:#18253a;box-shadow:0 2px 18px #25d0f477;}
-    .nav-tabs{display:flex;justify-content:center;gap:9px;margin:36px 0 18px 0;}
-    .nav-tab{padding:12px 26px;border-radius:8px;background:#eaf9fc;color:#098ad9;font-weight:700;font-size:1.04rem;border:none;cursor:pointer;transition:.15s;}
-    .nav-tab.active,.nav-tab:hover{background:#098ad9;color:#fff;}
-    .section{max-width:900px;margin:0 auto;padding:0 6vw 16px 6vw;background:#fff;box-shadow:0 2px 22px #b2e7f665;border-radius:18px;display:none;}
-    .section.active{display:block;animation:fadein .45s;}
-    @keyframes fadein{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
-    h2{color:#098ad9;margin-top:30px;font-size:1.5rem;}
-    .illust{display:block;margin:28px auto 13px auto;max-width:320px;border-radius:13px;box-shadow:0 0 16px #acdde5;}
-    .badges{display:flex;gap:7px;margin:9px 0;}
-    .badges img{height:29px;}
-    .skills-list{display:flex;flex-wrap:wrap;gap:12px;margin-top:7px;}
-    .skills-list span{background:#eaf9fc;color:#098ad9;border-radius:7px;padding:8px 18px;font-size:.98rem;font-weight:700;letter-spacing:1px;box-shadow:0 2px 11px #96b8c645;}
-    .skills-list span:hover{background:#25d0f4;color:#18253a;}
-    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:13px;margin-top:9px;}
-    .project-box{background:#f3fbfd;border-radius:10px;box-shadow:0 2px 8px #b4e7f645;padding:12px 11px;color:#262f32;min-height:80px;}
-    .career-block{background:#f8fafd;border-radius:12px;box-shadow:0 2px 12px #a8e7f665;padding:13px 10px;margin-bottom:11px;}
-    .career-block h3{color:#098ad9;margin-bottom:7px;}
-    .competency-table{width:100%;margin:13px 0;border-collapse:collapse;background:#f3fbfe;border-radius:10px;box-shadow:0 2px 8px #b4e7f645;}
-    .competency-table th,.competency-table td{padding:6px 9px;border-bottom:1px solid #eaf9fc;color:#098ad9;text-align:center;font-size:.98rem;}
-    .competency-table th{background:#eaf9fc;}
-    .competency-table tr:last-child td{border-bottom:none;}
-    .github-imgs{display:flex;gap:7px;justify-content:center;margin-top:9px;margin-bottom:10px;}
-    .github-imgs img{border-radius:10px;background:#fff;box-shadow:0 2px 12px #b4e7f645;height:73px;}
-    .contact-card{background:#eaf9fc;border-radius:13px;box-shadow:0 2px 12px #25d0f418;padding:13px 16px;margin:23px 0 0 0;}
-    .emojis{font-size:1.25rem;display:block;margin-bottom:4px;}
-    @media (max-width:840px){.section{padding:12px 2vw;}.profile-links{flex-direction:column;gap:8px;}.github-imgs img{height:44px;}}
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at 30% 20%, #eaf9fc 0%, #f6f9fc 43%, #dbf1ff 100%);
+      font-family: 'Fira Code', monospace;
+      color: #1a263a;
+      letter-spacing: .01em;
+    }
+    .hero-bg {
+      background: linear-gradient(120deg,#b2d8f7 0% , #8be7fa 55%, #b6c3ef 100%);
+      filter: blur(80px);
+      position: absolute;
+      top: -160px; left: -100px; width: 120vw; height: 370px; z-index: 0;
+      pointer-events:none;
+      opacity:.44;
+    }
+    .main-header {
+      text-align: center;
+      margin-top: 0;
+      padding-top: 32px;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 30px;
+    }
+    .profile-img {
+      display: block;
+      margin: 0 auto 14px auto;
+      height: 148px;
+      width: 148px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 0 0 38px #8be7fa6a, 0 2px 40px #dbe1ff5f;
+      background: #e4f6fc;
+      transition: box-shadow .25s;
+    }
+    .profile-img:hover { box-shadow:0 0 80px #56e7e6cc, 0 5px 60px #b6c3ef70; }
+    .main-title {
+      font-size: 2.45rem;
+      font-weight: 700;
+      color: #098ad9;
+      margin-bottom: 6px;
+      text-shadow: 0 4px 18px #dbe1ff44;
+    }
+    .subinfo {
+      font-size: 1.13rem;
+      color: #455;
+      margin-bottom: 8px;
+      text-align: center;
+      letter-spacing: .052em;
+    }
+    .emoji-hero { font-size: 2rem; margin-bottom: 3px; }
+    .profile-links { display: flex; justify-content: center; gap: 17px; margin: 13px 0 18px 0; flex-wrap: wrap;}
+    .profile-links a { background: #098ad9; color: #fff; font-weight: 700; text-decoration: none; font-size: 1.11rem;
+      padding: 12px 27px; border-radius: 9px; margin: 4px 0; transition: .18s;
+      box-shadow: 0 2px 15px #8be7faaf; }
+    .profile-links a:hover { background: #17c8ec; color: #233; box-shadow: 0 4px 30px #56e7e67e;}
+    .nav-tabs { display: flex; justify-content: center; gap: 9px; margin: 41px 0 18px 0; z-index:2;}
+    .nav-tab { padding: 13px 30px; border-radius: 9px; background: #eaf9fc; color: #098ad9;
+      font-weight: 700; font-size: 1.1rem; border: none; cursor: pointer; transition: .14s;}
+    .nav-tab.active,.nav-tab:hover { background: #098ad9; color: #fff; }
+    .section { max-width: 970px; margin: 0 auto 30px auto; padding: 26px 5vw 13px 5vw; background: #fff;
+      box-shadow: 0 2px 22px #b2e7f663; border-radius: 19px; display: none;}
+    .section.active { display: block; animation: fadein .48s;}
+    @keyframes fadein { from{opacity:0;transform:translateY(33px);} to{opacity:1;transform:translateY(0);}}
+    h2 { color: #098ad9; margin-top: 24px; font-size: 1.38rem; letter-spacing:.03em;}
+    .illust { display: block; margin: 29px auto 17px auto; max-width: 310px; border-radius: 12px; box-shadow: 0 0 20px #acdde5; }
+    .badges { display: flex; gap: 5px; margin: 14px 0; flex-wrap: wrap;}
+    .badges img { height:30px;vertical-align:middle;}
+    .skills-list { display: flex; flex-wrap: wrap; gap: 11px; margin-bottom:17px;}
+    .skills-list span { background: #eaf9fc; color: #098ad9; border-radius: 8px; padding: 9px 17px; font-size: 1rem; font-weight: 700; letter-spacing: 1px;}
+    .skills-list span:hover { background: #25d0f4; color: #18253a;}
+    .career-block { background: #f8fafd; border-radius: 12px; box-shadow: 0 2px 12px #b6d3ef54; padding: 12px 12px 8px 12px; margin-bottom: 10px;}
+    .career-block h3 { color: #098ad9; margin-bottom: 6px;}
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 7px;}
+    .project-box { background: #f3fbfd; border-radius: 10px; box-shadow: 0 2px 8px #b4e7f645; padding: 13px 11px; color: #262f32; min-height: 73px;}
+    .competency-table { width: 100%; margin: 13px 0; border-collapse: collapse; background: #eaf7fb; border-radius: 10px; }
+    .competency-table th, .competency-table td { padding: 7px 10px; border-bottom: 1px solid #eaf9fc; color: #098ad9; text-align: center; font-size: .98rem;}
+    .competency-table th { background: #eaf9fc; }
+    .competency-table tr:last-child td { border-bottom: none; }
+    .github-imgs { display: flex; gap: 9px; justify-content: center; margin-top: 14px; margin-bottom: 16px;}
+    .github-imgs img { border-radius: 10px; background: #fff; box-shadow: 0 2px 12px #b4e7f645; height: 65px;}
+    .contact-card { background: #eaf9fc; border-radius: 13px; box-shadow: 0 2px 12px #25d0f418; padding: 18px 17px; margin: 22px 0 8px 0;}
+    .emojis { font-size: 1.19rem; display: inline; }
+    @media (max-width: 840px) { .section { padding: 12px 2vw; }.profile-links { flex-direction: column; gap: 8px; } .github-imgs img { height: 40px; } .main-header{padding-top:11vw;} }
   </style>
 </head>
 <body>
-  <div style="text-align:center;padding-top:24px;">
+  <div class="hero-bg"></div>
+  <div class="main-header">
     <img src="image.jpg" class="profile-img" alt="Mari Eswar">
     <div class="main-title">Mari Eswar <span class="emojis">🤖💡🚀</span></div>
-    <div class="subtitle">AI Operations | Sales Leadership | Business Automation | Data Analytics</div>
+    <div class="subinfo">AI Operations | Sales Leadership | Business Automation | Data Analytics</div>
     <div class="profile-links">
       <a href="https://linkedin.com/in/marieswar873" target="_blank">LinkedIn</a>
       <a href="mailto:marieswar873@gmail.com" target="_blank">Email</a>
@@ -64,11 +117,19 @@
     <img class="illust" src="ai1.svg" alt="About Illustration"/>
     <h2>About Me</h2>
     <p>
-      Senior Operations Manager at Lokal, Bengaluru.<br>
-      AI-powered automation, business growth, and analytics.<br>
-      <b>Specialization:</b> <span class="emojis">💡 🤖 📊 🎯</span><br>
-      AI/ML Solution Dev, Sales Strategy, Workflow Automation, Revenue Growth, Team Leadership.<br>
-      <b>Philosophy:</b> <em>"Leveraging AI to transform operations, leading teams to exceed sales targets, building scalable solutions for growth."</em>
+      Strategic, innovative, and execution-driven leader with 4+ years in AI-powered operations and advanced business automation.<br>
+      Experienced in scaling teams and systems from the ground up, I specialize in designing and deploying AI/ML solutions and high-performance dashboards that deliver 80% faster outcomes.<br>
+      Passionate about sales excellence, team coaching, and cross-departmental synergy.<br>
+      Deeply interested in: <b>API integration, BigQuery, sales analytics, team building, n8n/Zapier automations, cloud platforms, customer success, and next-generation AI technologies.</b><br>
+      <br>
+      My work style blends relentless learning, creative problem-solving, and hands-on process optimization. I love collaborating on AI and automation for real-world impact—and always seek better tools to grow teams, drive revenue, and automate complexity. <br>
+      Certified as "Best Team Leader," I've led operations for fast-growing start-ups and enterprises alike.<br>
+      Open to leadership, data, or product AI opportunities—I'm driven to build the future of AI-powered business.<br>
+      <br>
+      <b>Current:</b> Senior Operations Manager at Lokal<br>
+      <b>Previous:</b> LOKAL, Tumbledry, Jio, Airtel<br>
+      <b>Location:</b> Bengaluru, India<br>
+      <b>Contact:</b> <a href="mailto:marieswar873@gmail.com">marieswar873@gmail.com</a>
     </p>
   </div>
   <div id="journey" class="section">
@@ -118,24 +179,24 @@
     </div>
   </div>
   <div id="skills" class="section">
-    <img class="illust" src="ai3.svg" alt="Tech Stack Illustration"/>
+    <img class="illust" src="ai3.svg" alt="Tech Skills Illustration"/>
     <h2>Tech Stack & Skills</h2>
-    <div class="badges">
-      <img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge"/>
-      <img src="https://img.shields.io/badge/Zapier-FF4A00?style=for-the-badge"/>
-      <img src="https://img.shields.io/badge/Google_Apps_Script-4285F4?style=for-the-badge"/>
-      <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge"/>
-      <img src="https://img.shields.io/badge/AI_Tools-00D9FF?style=for-the-badge"/>
-      <img src="https://img.shields.io/badge/BigQuery-669DF6?style=for-the-badge"/>
-      <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge"/>
-      <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge"/>
-      <img src="https://img.shields.io/badge/Google_Sheets-34A853?style=for-the-badge"/>
-      <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge"/>
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge"/>
-      <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge"/>
-      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge"/>
+    <div class="badges" style="flex-wrap: wrap;">
+      <img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white&labelColor=000"/>
+      <img src="https://img.shields.io/badge/Zapier-FF4A00?style=for-the-badge&logo=zapier&logoColor=white&labelColor=000"/>
+      <img src="https://img.shields.io/badge/Google_Apps_Script-4285F4?style=for-the-badge&logo=google&logoColor=white&labelColor=000"/>
+      <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white&labelColor=000"/>
+      <img src="https://img.shields.io/badge/AI_Tools-00D9FF?style=for-the-badge&logo=openai&logoColor=white&labelColor=000"/>
+      <img src="https://img.shields.io/badge/BigQuery-669DF6?style=for-the-badge&logo=googlebigquery&logoColor=white&labelColor=000"/>
+      <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=000"/>
+      <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black&labelColor=000"/>
+      <img src="https://img.shields.io/badge/Google_Sheets-34A853?style=for-the-badge&logo=googlesheets&logoColor=white&labelColor=000"/>
+      <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white&labelColor=000"/>
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black&labelColor=000"/>
+      <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white&labelColor=000"/>
+      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=000"/>
     </div>
-    <div class="skills-list">
+    <div class="skills-list" style="margin-bottom:14px;">
       <span>AI Automation 🤖</span>
       <span>Leadership 🚀</span>
       <span>CRM Integration 💡</span>
@@ -143,7 +204,7 @@
       <span>Google Apps Script ✨</span>
       <span>Node.js, Python</span>
       <span>Power BI, BigQuery 📊</span>
-      <span>Netlify & GitHub 🧑‍💻</span>
+      <span>Netlify & GitHub 👨‍💻</span>
     </div>
     <h2>Core Competencies</h2>
     <table class="competency-table">
@@ -206,9 +267,8 @@
       </p>
     </div>
   </div>
-  <footer>
-    Portfolio by Mari Eswar &copy; 2025 · <a style="color:#098ad9" href="mailto:marieswar873@gmail.com">Contact</a>
-    <br>All illustrations and photos should be uploaded to your repo folder for best results!
+  <footer style="text-align:center;background:transparent;color:#a6a8b1;font-size:.98rem;border:none;margin-top:16px;">
+    &copy; 2025 Mari Eswar · <a style="color:#098ad9" href="mailto:marieswar873@gmail.com">Contact</a>
   </footer>
   <script>
     function showSection(id){
