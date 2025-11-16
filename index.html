@@ -1,341 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mari Eswar | AI Operations, Sales & Automation Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- External Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="https://img.icons8.com/color/96/robot-2.png"/>
+  <meta charset="UTF-8" />
+  <title>Mari Eswar | AI Operations Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Fonts & Icons8 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&display=swap">
   <style>
     body {
       margin: 0;
-      font-family: "Fira Code", monospace;
-      background: linear-gradient(135deg, #181c24 60%, #26e4da 100%);
+      background: #181c24;
+      font-family: 'Fira Code', monospace;
       color: #fff;
-      padding: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      background: rgba(26,28,36,0.96);
-      border-radius: 16px;
-      box-shadow: 0 0 40px #1b222a77;
-      display: flex;
-      flex-direction: row;
-      overflow: hidden;
-    }
-    .side {
-      background: linear-gradient(135deg, #242c37 60%, #26e4da 100%);
-      padding: 40px 20px;
-      width: 320px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 32px;
-      border-right: 1px solid #22e7cbaa;
-    }
-    .side img.profile {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 5px solid #26e4da;
-      object-fit: cover;
-      box-shadow: 0 0 20px #26e4da99;
-    }
-    .side img.ai-art {
-      width: 120px;
-      border-radius: 30px;
-      box-shadow: 0 0 18px #23a4d9bb;
-      margin-top: 12px;
-    }
-    .main {
-      flex: 1;
-      padding: 40px;
+    .hero {
       position: relative;
       display: flex;
-      flex-direction: column;
-      gap: 28px;
+      align-items: center;
+      justify-content: center;
+      min-height: 75vh;
+      background: linear-gradient(120deg, #232637 70%, #26e4da 110%);
+      overflow: hidden;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 16px;
-      font-weight: bold;
+    .hero-art {
+      position: absolute;
+      right: 3vw;
+      bottom: 0;
+      height: 410px;
+      z-index: 1;
+      opacity: 0.93;
+      filter: drop-shadow(0 0 46px #26e4da80);
+      animation: floatMain 4.8s ease-in-out infinite alternate;
+    }
+    @keyframes floatMain {
+      from { transform: translateY(0);}
+      to { transform: translateY(-28px);}
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 420px;
+      margin-top: 70px;
+      margin-left: 30px;
+    }
+    .hero-content h1 {
+      font-size: 3.7rem;
+      font-weight: 700;
       color: #26e4da;
+      margin-bottom: 15px;
+      text-shadow: 0 3px 24px #1fe4dac6;
       letter-spacing: 2px;
-      text-shadow: 0 2px 16px #26e4da77;
     }
-    .tagline {
-      font-size: 1.2rem;
+    .subtitle {
+      font-size: 1.45rem;
       color: #b8fff5;
-      margin-bottom: 18px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 19px;
+      text-shadow: 0 1px 19px #26e4da90;
     }
-    .banner {
-      background: linear-gradient(110deg, #19b3b3 52%, #26e4da 100%);
-      padding: 14px 28px;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      margin-bottom: 18px;
-      color: #181c24;
-      font-weight: 600;
-      box-shadow: 0 5px 24px #21d3e572;
-      text-align: center;
-    }
-    .links {
+    .hero-content .links {
+      margin: 22px 0 30px 0;
       display: flex;
       gap: 18px;
-      margin-bottom: 18px;
       flex-wrap: wrap;
     }
-    .links a {
-      padding: 12px 28px;
-      border-radius: 8px;
-      font-size: 1.05rem;
-      color: #fff;
-      background: linear-gradient(90deg, #26e4da 50%, #2c4459 100%);
-      text-decoration: none;
-      box-shadow: 0 2px 18px #26e4da44;
+    .hero-content .links a {
+      color: #181c24;
+      background: #26e4da;
       font-weight: 700;
-      transition: 0.17s;
-      border: none;
+      text-decoration: none;
+      border-radius: 9px;
+      padding: 13px 27px;
+      font-size: 1.08rem;
+      transition: 0.18s;
+      box-shadow: 0 0 20px #19b3b366;
       outline: none;
+      border: none;
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-family: inherit;
+      gap: 7px;
     }
-    .links a:hover {
-      background: linear-gradient(90deg, #19b3b3 10%, #26e4da 80%);
-      transform: scale(1.07);
-      color: #222;
-    }
-    .section-illustration {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .section-illustration img {
-      max-width: 330px;
-      border-radius: 20px;
-      box-shadow: 0 0 34px #26e4da81;
-    }
-    .resume-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 24px;
-      background: #232a36ce;
-      border-radius: 14px;
-      box-shadow: 0 2px 18px #26e4da66;
-    }
-    .resume-table td {
-      padding: 12px 24px;
-      text-align: left;
-      font-size: 1.07rem;
-      border-bottom: 1px solid #1e8388;
-      color: #dafaf7;
-    }
-    .resume-table th {
-      padding: 12px 24px;
-      text-align: left;
-      background: #19b3b39e;
+    .hero-content .links a:hover {
+      background: #19b3b3;
       color: #fff;
-      text-transform: uppercase;
+      transform: scale(1.11);
+      box-shadow: 0 4px 20px #21d3e599;
+    }
+    section {
+      padding: 60px 5vw;
+      max-width: 960px;
+      margin: auto;
+    }
+    .illustration {
+      display: block;
+      margin: 40px auto 34px auto;
+      max-width: 520px;
+      border-radius: 24px;
+      box-shadow: 0 0 54px #21d3e577, 0 0 12px #fff2;
+      animation: floatIll 8.2s ease-in-out infinite alternate;
+    }
+    @keyframes floatIll {
+      from { transform: translateY(0);}
+      to { transform: translateY(-18px);}
+    }
+    .special-graphic {
+      width: 120px;
+      margin: 21px auto -12px auto;
+      opacity: 0.83;
+      display: block;
+      filter: drop-shadow(0 0 20px #26e4da67);
+      animation: waveGlow 9s infinite alternate;
+    }
+    @keyframes waveGlow {
+      from { filter: drop-shadow(0 0 20px #26e4da67);}
+      to { filter: drop-shadow(0 0 30px #26e4daec);}
+    }
+    .box {
+      background: #232a36ee;
+      border-radius: 20px;
+      box-shadow: 0 2px 28px #26e4da54;
+      padding: 39px 38px 35px 38px;
+      margin-bottom: 36px;
+      position: relative;
+    }
+    .box h2 { color: #26e4da; margin-bottom: 17px;}
+    .skills-list {
+      display: flex; flex-wrap: wrap; gap: 16px;
+      font-size: 1.13rem;
+      margin-top: 13px;
+    }
+    .skills-list span {
+      background: #19b3b3;
+      color: #181c24;
+      border-radius: 12px;
+      padding: 13px 23px;
+      font-weight: 700;
+      box-shadow: 0 2px 14px #19b3b366;
+      letter-spacing: 1px;
+      transition: 0.18s;
+    }
+    .skills-list span:hover {
+      background: #26e4da;
+      color: #222;
+      box-shadow: 0 2px 14px #26e4da86;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 28px;
+    }
+    .project-box {
+      background: #22283d;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px #26e4da44;
+      padding: 28px 18px;
+      color: #d8f4f2;
+      position: relative;
+    }
+    .project-box h3 { color: #26e4da; margin-bottom: 8px;}
+    .project-box::after {
+      content: '';
+      position: absolute;
+      top: -10px; right: -10px;
+      width: 38px; height: 38px;
+      background: url('https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-machine-learning-artificial-intelligence-flaticons-lineal-color-flat-icons-4.png') no-repeat center center;
+      background-size: 38px;
+      opacity: 0.18;
+      filter: blur(1.8px);
+    }
+    footer {
+      text-align: center;
+      background: #232a36;
+      padding: 32px 0 18px 0;
+      color: #b8fff5;
+      font-size: 1.08rem;
+      border-top: 1px solid #19b3b361;
+      margin-top: 60px;
       letter-spacing: 1px;
     }
-    .skills-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 24px;
-      justify-content: flex-start;
-    }
-    .skills-badges img {
-      max-height: 38px;
-      border-radius: 8px;
-      box-shadow: 0 2px 12px #21d3e5aa;
-    }
-    .career-section {
-      padding: 18px 0;
-      margin-bottom: 10px;
-      border-top: 2px solid #21d3e572;
-    }
-    .details-block {
-      background: #232a36b6;
-      border-radius: 12px;
-      padding: 14px 20px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 15px #26e4da44;
-    }
-    .details-block h2 { color: #26e4da; margin-bottom: 10px; }
-    .core-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 18px;
-      background: #232a36ce;
-      border-radius: 10px;
-    }
-    .core-table td, .core-table th {
-      padding: 10px 13px;
-      border-bottom: 1px solid #25b2c6;
-      color: #b8fff5;
-      font-size: 1.03rem;
-      text-align: center;
-    }
-    .core-table th { background: #19b3b39e; color: #fff; }
-    @media (max-width: 900px) {
-      .container { flex-direction: column; }
-      .side, .main { width: 100%; padding: 28px; }
-      .side img.profile { width: 120px; height: 120px; }
+    @media (max-width: 840px) {
+      .hero { flex-direction: column; min-height: 460px; background: #232633;}
+      .hero-art { display: none;}
+      .hero-content { margin: 0 auto; }
     }
   </style>
 </head>
 <body>
-<div class="container">
-  <!-- SIDE ILLUSTRATIONS (AI + PROFILE) -->
-  <aside class="side">
-    <img src="image.jpg" class="profile" alt="Mari Eswar Profile" />
-    <img class="ai-art" src="https://img.icons8.com/color/160/robot-2.png" alt="AI Robot Art" />
-    <img class="ai-art" src="https://img.icons8.com/fluency/120/artificial-intelligence.png" alt="AI Brain Art" />
-    <img class="ai-art" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/120/external-machine-learning-artificial-intelligence-flaticons-lineal-color-flat-icons-4.png" alt="ML Illustration"/>
-  </aside>
-  <main class="main">
-    <h1>MARI ESWAR</h1>
-    <div class="tagline">AI Operations &nbsp;|&nbsp; Sales Leadership &nbsp;|&nbsp; Business Automation</div>
-    <div class="banner">4+ Years Driving AI-Powered Business Transformation • Award-Winning Sales Leader • Scaled Ops to 300+ Partners • Built AI Systems Saving 80% Implementation Time</div>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/mari-eswar-718b6022b/" target="_blank">LinkedIn <img src="https://img.icons8.com/ios-filled/32/26e4da/linkedin.png"/></a>
-      <a href="mailto:marieswar873@gmail.com" target="_blank">Email <img src="https://img.icons8.com/ios-filled/32/26e4da/gmail-new.png"/></a>
-      <a href="https://wa.me/919500365660" target="_blank">WhatsApp <img src="https://img.icons8.com/color/32/26e4da/whatsapp.png"/></a>
-      <a href="https://github.com/marieswar873-sys" target="_blank">GitHub <img src="https://img.icons8.com/material-sharp/32/26e4da/github.png"/></a>
+  <div class="hero">
+    <!-- BIG Floating AI Illustration (replace src as needed) -->
+    <img class="hero-art" src="https://cdn.pixabay.com/photo/2017/01/31/13/14/artificial-intelligence-2025790_1280.png" alt="AI Illustration" />
+    <div class="hero-content">
+      <h1>Mari Eswar</h1>
+      <div class="subtitle">
+        AI Operations<br>Sales Leadership | Automation
+      </div>
+      <div class="links">
+        <a href="https://linkedin.com/in/mari-eswar-718b6022b/" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/24/26e4da/linkedin.png"/> LinkedIn
+        </a>
+        <a href="mailto:marieswar873@gmail.com" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/24/26e4da/gmail-new.png"/> Email
+        </a>
+        <a href="https://github.com/marieswar873-sys" target="_blank">
+          <img src="https://img.icons8.com/material-sharp/24/26e4da/github.png"/> GitHub
+        </a>
+        <a href="https://wa.me/919500365660" target="_blank">
+          <img src="https://img.icons8.com/color/24/26e4da/whatsapp.png"/> WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <!-- Floating Special Graphic -->
+    <img class="special-graphic" src="https://img.icons8.com/fluency/120/artificial-intelligence.png" alt="AI Brain Graphic" />
+
+    <!-- Floating Creative Illustration (replace src as needed) -->
+    <img class="illustration" src="https://cdn.pixabay.com/photo/2022/11/26/19/41/artificial-intelligence-7615950_1280.jpg" alt="AI Art Creative" />
+
+    <div class="box">
+      <h2>About Me</h2>
+      <p>
+        Senior Operations Manager at Lokal, Bangalore, India.<br>
+        AI-Powered business automation and scaling.<br>
+        Award-winning sales leader, driving growth via automation and analytics.
+      </p>
     </div>
 
-    <!-- AI-THEMED HERO ILLUSTRATION -->
-    <div class="section-illustration">
-      <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/artificial-intelligence-2025790_1280.png" alt="AI Neural Network Visualization"/>
+    <div class="box">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <span>AI-Powered Automation</span>
+        <span>Sales Leadership</span>
+        <span>Team Building</span>
+        <span>Data Analytics</span>
+        <span>CRM & Cloud Platforms</span>
+        <span>n8n, Zapier</span>
+        <span>Google Apps Script</span>
+        <span>Node.js, JS, Python</span>
+        <span>Power BI</span>
+        <span>Netlify & Web Automation</span>
+      </div>
     </div>
 
-    <table class="resume-table">
-      <tr>
-        <th>📍 Location</th>
-        <th>💼 CTC</th>
-        <th>📅 Notice</th>
-      </tr>
-      <tr>
-        <td>Bengaluru, India</td>
-        <td>₹8.7L &rarr; ₹13L</td>
-        <td>60 Days</td>
-      </tr>
-    </table>
-
-    <section class="skills-badges">
-      <img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/Zapier-FF4A00?style=for-the-badge&logo=zapier&logoColor=white&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/Google_Apps_Script-4285F4?style=for-the-badge&logo=google&logoColor=white&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/AI_Tools-00D9FF?style=for-the-badge&logo=openai&logoColor=white&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/BigQuery-669DF6?style=for-the-badge&logo=googlebigquery&logoColor=white&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/Google_Sheets-34A853?style=for-the-badge&logo=googlesheets&logoColor=white&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white&labelColor=000000"/>
-      <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelColor=000000"/>
-    </section>
-
-    <table class="core-table">
-      <tr>
-        <th>AI & Technology</th>
-        <th>Sales & Leadership</th>
-        <th>Operations & Strategy</th>
-      </tr>
-      <tr>
-        <td>AI-Powered Automation</td>
-        <td>Team Management (60+)</td>
-        <td>Process Optimization</td>
-      </tr>
-      <tr>
-        <td>System Integration</td>
-        <td>Sales Campaign Design</td>
-        <td>Business Scaling</td>
-      </tr>
-      <tr>
-        <td>Real-time Dashboards</td>
-        <td>Performance Coaching</td>
-        <td>Partner Management (300+)</td>
-      </tr>
-      <tr>
-        <td>Workflow Automation</td>
-        <td>Market Expansion</td>
-        <td>KPI Delivery</td>
-      </tr>
-      <tr>
-        <td>Data Analytics</td>
-        <td>Revenue Growth</td>
-        <td>Cost Reduction</td>
-      </tr>
-    </table>
-
-    <section class="career-section">
-      <div class="details-block">
-        <h2>🏢 LOKAL - Senior Operations Manager (Sep 2025 - Present)</h2>
-        <ul>
-          <li>🚀 Leading AI-Powered Automation & Business Growth</li>
-          <li>⚡ Deployed Exotel IVR-Freshdesk integration in <b>3 DAYS</b> (vs 2-3 weeks)</li>
-          <li>📊 Designed AI-powered real-time dashboards for call & team monitoring</li>
-          <li>🎫 Built automated grievance tracking across multiple verticals</li>
-          <li>🔄 Implemented unified AI-driven ticketing (Astro, Eaze, Gyan TV)</li>
-          <li>💰 Achieved 80%+ reduction in implementation time</li>
-          <li>📈 Led cross-functional teams for operational excellence</li>
-          <li>🎯 Drove cost reduction through strategic automation</li>
-          <li>💼 Managed business partnerships and client onboarding</li>
-        </ul>
+    <div class="box">
+      <h2>AI Portfolio Projects</h2>
+      <div class="projects-grid">
+        <div class="project-box">
+          <h3>Exotel IVR-Freshdesk Integration</h3>
+          <p>Deployed in 3 days; unified support & sales automation; real-time dashboards.</p>
+        </div>
+        <div class="project-box">
+          <h3>Sales Automation Suite</h3>
+          <p>Scaled ops to 300+ partners; automated reports; team performance analytics.</p>
+        </div>
+        <div class="project-box">
+          <h3>Partner Activation AI</h3>
+          <p>Automated onboarding, ticketing, and training (Astro/Eaze/Gyan TV).</p>
+        </div>
       </div>
-      <div class="details-block">
-        <h2>🏢 LOKAL - Operations Manager (Sep 2024 - Sep 2025)</h2>
-        <ul>
-          <li>✅ Onboarded new business partners with seamless activation</li>
-          <li>✅ Implemented automation for sales reporting & client follow-ups</li>
-          <li>✅ Supported cross-team collaboration and KPI delivery</li>
-        </ul>
-      </div>
-      <div class="details-block">
-        <h2>🏢 TUMBLEDRY - Franchise Partner Manager (Aug 2023 - Sep 2024)</h2>
-        <ul>
-          <li>📈 Scaled franchise network from <b>0 → 52+ active partners</b></li>
-          <li>💼 Led high-performing sales team across region</li>
-          <li>🎯 Executed market expansion strategies</li>
-          <li>📊 Implemented targeted sales campaigns</li>
-        </ul>
-      </div>
-      <div class="details-block">
-        <h2>🏢 JIO - Jio Point Manager (Aug 2022 - Aug 2023)</h2>
-        <ul>
-          <li>🏪 Managed operations for <b>250+ retail partners</b></li>
-          <li>📈 Led sales, distribution & market expansion</li>
-          <li>🎯 Onboarded retailers with training & support</li>
-        </ul>
-      </div>
-      <div class="details-block">
-        <h2>🏢 AIRTEL - Sales Team Lead (Mar 2021 - Aug 2022)</h2>
-        <ul>
-          <li>👥 Led <b>60 freelancers + 150 retailers</b></li>
-          <li>🏆 <b>BEST TEAM LEADER OF THE YEAR</b></li>
-          <li>✅ Exceeded sales targets consistently</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Another AI illustration for the bottom -->
-    <div class="section-illustration">
-      <img src="https://cdn.pixabay.com/photo/2022/11/26/19/41/artificial-intelligence-7615950_1280.jpg" alt="AI Abstract Art"/>
     </div>
-  </main>
-</div>
+
+    <div class="box">
+      <h2>Contact</h2>
+      <p>
+        Want to work together, or just say hi?<br>
+        <b>Email:</b> marieswar873@gmail.com<br>
+        <b>WhatsApp:</b> +91-9500365660<br>
+        <b>LinkedIn:</b> <a href="https://linkedin.com/in/mari-eswar-718b6022b/" target="_blank">Mari Eswar</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Portfolio by Mari Eswar &copy; 2025 &middot;
+    <a style="color:#26e4da" href="mailto:marieswar873@gmail.com">Contact</a>
+  </footer>
 </body>
 </html>
+
