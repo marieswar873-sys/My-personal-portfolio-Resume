@@ -6,108 +6,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0; background: #f8fafc; font-family: 'Fira Code', monospace; color: #223; min-height: 100vh;
-    }
-    .header {padding:46px 0 22px 0;background: linear-gradient(100deg,#eaf9fc 0%,#fdf6fd 100%);text-align:center;}
-    .main-title {font-size:3.1rem;font-weight:700;letter-spacing:1px;color:#11a2e0;margin-bottom:7px;}
-    .subtitle {font-size:1.18rem;color:#444;margin-bottom:23px;}
-    .profile-links {
-      display:flex;justify-content:center;gap:18px;margin-bottom:21px;flex-wrap:wrap;
-    }
-    .profile-links a {
-      padding:10px 22px;border-radius:8px;color:#fff;background:#11a2e0;text-decoration:none;font-size:1.07rem;
-      font-weight:700;box-shadow:0 2px 11px #b4e7f6c2;transition:.18s;display:inline-flex;align-items:center;gap:6px;
-    }
-    .profile-links a:hover {background:#30e0f4;color:#18253a;box-shadow:0 2px 24px #30e0f477;}
-    .header img.hero-illust {margin-bottom:12px;height:160px;max-width:100%;border-radius:22px;
-      box-shadow:0 0 22px #abebf7c2;background:#fff;animation:floatmain 6.5s infinite alternate;}
-    @keyframes floatmain {0%{transform:translateY(0);}100%{transform:translateY(-16px);}}
-    section {max-width:980px;margin:38px auto 0 auto;padding:0 6vw;background:#fff;border-radius:20px;
-      box-shadow:0 2px 27px #b4e7f666;position:relative;overflow:hidden;}
-    h2 {color:#11a2e0;margin-top:41px;}
-    .illust-main {display:block;margin:40px auto 14px auto;max-width:410px;border-radius:16px;
-      box-shadow:0 0 22px #cde3fa;animation:floatIll 8s infinite alternate;}
-    @keyframes floatIll {0%{transform:translateY(0);}100%{transform:translateY(-13px);}}
-    .illust-side {display:block;margin:35px auto 19px auto;max-width:290px;border-radius:11px;
-      box-shadow:0 0 16px #e1ecfa;}
-    .skills-list {display:flex;flex-wrap:wrap;gap:13px;margin-top:10px;}
-    .skills-list span {background:#eaf9fc;color:#11a2e0;border-radius:7px;padding:9px 19px;font-size:1rem;
-      font-weight:700;letter-spacing:1px;box-shadow:0 2px 11px #b4e7f645;transition:.16s;}
-    .skills-list span:hover {background:#30e0f4;color:#18253a;}
-    .badges {display:flex;gap:8px;margin:15px 0;}
-    .badges img{height:32px;}
-    .projects-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px;margin-top:9px;}
-    .project-box {background:#f5fafd;border-radius:11px;box-shadow:0 2px 8px #b4e7f645;padding:14px 13px;color:#262f32;min-height:85px;}
-    .career-block {background:#f8fafd;border-radius:13px;box-shadow:0 2px 12px #b4e7f645;padding:17px 14px;margin-bottom:11px; }
-    .career-block h3 {color:#11a2e0;margin-bottom:7px;}
-    .competency-table {width:100%;margin:14px 0;border-collapse:collapse;background:#f3fbfe;border-radius:10px;box-shadow:0 2px 8px #b4e7f645;}
-    .competency-table th,.competency-table td {padding:7px 10px;border-bottom:1px solid #eaf9fc;color:#11a2e0;text-align:center;font-size:1.03rem;}
-    .competency-table th {background:#eaf9fc;}
-    .competency-table tr:last-child td {border-bottom:none;}
-    .github-imgs {display:flex;gap:8px;justify-content:center;margin-top:10px;margin-bottom:19px;}
-    .github-imgs img {border-radius:12px;background:#fff;box-shadow:0 2px 16px #b4e7f645;height:90px;}
-    .contact-card {background:#eaf9fc;border-radius:15px;box-shadow:0 2px 14px #30e0f418;padding:15px 18px;margin:37px 0 0 0;}
-    footer {text-align:center;background:#f5fafd;padding:22px 0 11px 0;color:#11a2e0;font-size:1.07rem;border-top:1px solid #e0e0e0;margin-top:23px;}
-    @media (max-width:840px) {
-      section {padding:12px 2vw;}
-      .profile-links {flex-direction:column;gap:10px;}
-      .header img.hero-illust {height:80px;}
-      .github-imgs img {height:60px;}
-    }
+    body {margin:0;background:#f8fafc;font-family:'Fira+Code',monospace;color:#223;}
+    .main-title{font-size:2.6rem;font-weight:700;letter-spacing:1px;color:#098ad9;margin-bottom:7px;}
+    .subtitle{font-size:1.11rem;color:#456;margin-bottom:18px;text-align:center;}
+    .profile-img{display:block;margin:22px auto 10px auto;height:110px;width:110px;border-radius:50%;object-fit:cover;box-shadow:0 0 20px #a2eaff;}
+    .profile-links{display:flex;justify-content:center;gap:16px;margin-bottom:19px;flex-wrap:wrap;}
+    .profile-links a{padding:9px 20px;border-radius:7px;color:#fff;background:#098ad9;text-decoration:none;font-size:1.05rem;font-weight:700;box-shadow:0 2px 11px #98e2f2c2;transition:.18s;display:inline-flex;align-items:center;gap:6px;}
+    .profile-links a:hover{background:#25d0f4;color:#18253a;box-shadow:0 2px 18px #25d0f477;}
+    .nav-tabs{display:flex;justify-content:center;gap:9px;margin:36px 0 18px 0;}
+    .nav-tab{padding:12px 26px;border-radius:8px;background:#eaf9fc;color:#098ad9;font-weight:700;font-size:1.04rem;border:none;cursor:pointer;transition:.15s;}
+    .nav-tab.active,.nav-tab:hover{background:#098ad9;color:#fff;}
+    .section{max-width:900px;margin:0 auto;padding:0 6vw 16px 6vw;background:#fff;box-shadow:0 2px 22px #b2e7f665;border-radius:18px;display:none;}
+    .section.active{display:block;animation:fadein .45s;}
+    @keyframes fadein{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+    h2{color:#098ad9;margin-top:30px;font-size:1.5rem;}
+    .illust{display:block;margin:28px auto 13px auto;max-width:320px;border-radius:13px;box-shadow:0 0 16px #acdde5;}
+    .badges{display:flex;gap:7px;margin:9px 0;}
+    .badges img{height:29px;}
+    .skills-list{display:flex;flex-wrap:wrap;gap:12px;margin-top:7px;}
+    .skills-list span{background:#eaf9fc;color:#098ad9;border-radius:7px;padding:8px 18px;font-size:.98rem;font-weight:700;letter-spacing:1px;box-shadow:0 2px 11px #96b8c645;}
+    .skills-list span:hover{background:#25d0f4;color:#18253a;}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:13px;margin-top:9px;}
+    .project-box{background:#f3fbfd;border-radius:10px;box-shadow:0 2px 8px #b4e7f645;padding:12px 11px;color:#262f32;min-height:80px;}
+    .career-block{background:#f8fafd;border-radius:12px;box-shadow:0 2px 12px #a8e7f665;padding:13px 10px;margin-bottom:11px;}
+    .career-block h3{color:#098ad9;margin-bottom:7px;}
+    .competency-table{width:100%;margin:13px 0;border-collapse:collapse;background:#f3fbfe;border-radius:10px;box-shadow:0 2px 8px #b4e7f645;}
+    .competency-table th,.competency-table td{padding:6px 9px;border-bottom:1px solid #eaf9fc;color:#098ad9;text-align:center;font-size:.98rem;}
+    .competency-table th{background:#eaf9fc;}
+    .competency-table tr:last-child td{border-bottom:none;}
+    .github-imgs{display:flex;gap:7px;justify-content:center;margin-top:9px;margin-bottom:10px;}
+    .github-imgs img{border-radius:10px;background:#fff;box-shadow:0 2px 12px #b4e7f645;height:73px;}
+    .contact-card{background:#eaf9fc;border-radius:13px;box-shadow:0 2px 12px #25d0f418;padding:13px 16px;margin:23px 0 0 0;}
+    .emojis{font-size:1.25rem;display:block;margin-bottom:4px;}
+    @media (max-width:840px){.section{padding:12px 2vw;}.profile-links{flex-direction:column;gap:8px;}.github-imgs img{height:44px;}}
   </style>
 </head>
 <body>
-  <div class="header">
-    <!-- Modern interactive AI illustration from storyset.com -->
-    <img class="hero-illust" src="https://storyset.com/technology/technology-amico.svg" alt="AI Portfolio Interactive Hero" />
-    <div class="main-title">Mari Eswar</div>
-    <div class="subtitle">AI Operations | Sales Leadership | Automation | Data Analytics</div>
+  <div style="text-align:center;padding-top:24px;">
+    <img src="image.jpg" class="profile-img" alt="Mari Eswar">
+    <div class="main-title">Mari Eswar <span class="emojis">🤖💡🚀</span></div>
+    <div class="subtitle">AI Operations | Sales Leadership | Business Automation | Data Analytics</div>
     <div class="profile-links">
       <a href="https://linkedin.com/in/marieswar873" target="_blank">LinkedIn</a>
       <a href="mailto:marieswar873@gmail.com" target="_blank">Email</a>
       <a href="https://github.com/marieswar873-sys" target="_blank">GitHub</a>
       <a href="https://wa.me/919500365660" target="_blank">WhatsApp</a>
     </div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showSection('about')">About</button>
+      <button class="nav-tab" onclick="showSection('journey')">Journey</button>
+      <button class="nav-tab" onclick="showSection('skills')">Tech Stack</button>
+      <button class="nav-tab" onclick="showSection('projects')">Projects</button>
+      <button class="nav-tab" onclick="showSection('contact')">Contact</button>
+    </div>
   </div>
-
-  <section>
-    <img class="illust-main" src="https://storyset.com/technology/artificial-intelligence-amico.svg" alt="AI Team Interactive Illustration" />
-
+  <div id="about" class="section active">
+    <img class="illust" src="ai1.svg" alt="About Illustration"/>
     <h2>About Me</h2>
     <p>
-      Senior Operations Manager at Lokal, Bangalore.<br>
-      AI-powered automation, business scaling, analytics.<br>
-      <b>Specialization:</b> AI/ML Solutions, Sales Strategy, Workflow Automation, Revenue Growth, Team Leadership<br>
-      <b>Philosophy:</b>
-      <em>"Leveraging AI to transform operations,<br>
-      Leading teams to exceed sales targets,<br>
-      Building scalable solutions for growth"</em>
+      Senior Operations Manager at Lokal, Bengaluru.<br>
+      AI-powered automation, business growth, and analytics.<br>
+      <b>Specialization:</b> <span class="emojis">💡 🤖 📊 🎯</span><br>
+      AI/ML Solution Dev, Sales Strategy, Workflow Automation, Revenue Growth, Team Leadership.<br>
+      <b>Philosophy:</b> <em>"Leveraging AI to transform operations, leading teams to exceed sales targets, building scalable solutions for growth."</em>
     </p>
-
-    <h2>Core Expertise</h2>
-    <div class="core-list">
-      <b>🤖 AI & Automation</b>
-      <ul>
-        <li>Built AI-powered dashboards</li>
-        <li>Automated grievance tracking systems</li>
-        <li>Reduced implementation time by 80%</li>
-        <li>Real-time performance monitoring</li>
-        <li>Multi-channel integration systems</li>
-      </ul>
-      <b>📈 Sales & Leadership</b>
-      <ul>
-        <li>Led 60+ sales professionals; 300+ active partners</li>
-        <li>Award: Best Team Leader (Airtel)</li>
-        <li>Managed retail operations & market expansion</li>
-      </ul>
-    </div>
-    <div class="badges">
-      <img src="https://img.shields.io/badge/%F0%9F%93%8D_Location-Bengaluru,_India-FF6B6B?style=for-the-badge&labelColor=1a1a1a"/>
-      <img src="https://img.shields.io/badge/%F0%9F%92%BC_CTC-%E2%82%B98.7L_%E2%86%92_%E2%82%B913L-4CAF50?style=for-the-badge&labelColor=1a1a1a"/>
-      <img src="https://img.shields.io/badge/%F0%9F%93%85_Notice-60_Days-FFA726?style=for-the-badge&labelColor=1a1a1a"/>
-    </div>
-
+  </div>
+  <div id="journey" class="section">
+    <img class="illust" src="ai2.svg" alt="Journey Illustration"/>
     <h2>Professional Journey</h2>
     <div class="career-block">
       <h3>LOKAL - Senior Operations Manager (Sep 2025 - Present)</h3>
@@ -115,116 +80,143 @@
         <li>Deployed Exotel IVR-Freshdesk integration in 3 DAYS</li>
         <li>Designed AI-powered dashboards</li>
         <li>Automated grievance tracking</li>
-        <li>AI-driven ticketing (Astro, Eaze, Gyan TV)</li>
+        <li>Implemented unified AI-driven ticketing (Astro, Eaze, Gyan TV)</li>
         <li>Achieved 80%+ reduction in implementation time</li>
-        <li>Managed cross-teams, cost reduction</li>
-        <li>Managed partnerships & onboarding</li>
+        <li>Led operational excellence and partnerships</li>
       </ul>
     </div>
     <div class="career-block">
       <h3>LOKAL - Operations Manager (Sep 2024 - Sep 2025)</h3>
       <ul>
         <li>Onboarded partners with seamless activation</li>
-        <li>Automated sales reporting & follow-ups</li>
-        <li>Supported collaboration & KPI delivery</li>
+        <li>Automated sales reporting</li>
+        <li>Supported KPI delivery</li>
       </ul>
     </div>
     <div class="career-block">
       <h3>TUMBLEDRY - Franchise Partner Manager (Aug 2023 - Sep 2024)</h3>
       <ul>
-        <li>Scaled franchise network from 0 → 52+</li>
-        <li>Led team, executed expansion strategies</li>
-        <li>Implemented campaigns, training, analytics</li>
+        <li>Scaled franchise network 0 → 52+ partners</li>
+        <li>Implemented expansion strategies</li>
+        <li>Built partner relationships</li>
       </ul>
     </div>
     <div class="career-block">
       <h3>JIO - Jio Point Manager (Aug 2022 - Aug 2023)</h3>
       <ul>
         <li>Managed 250+ retail partners</li>
-        <li>Led sales, distribution</li>
+        <li>Drove network performance</li>
       </ul>
     </div>
     <div class="career-block">
       <h3>AIRTEL - Sales Team Lead (Mar 2021 - Aug 2022)</h3>
       <ul>
-        <li>Led 60 freelancers + 150 retailers</li>
+        <li>Led 60 freelancers, 150 retailers</li>
         <li>Best Team Leader of the Year</li>
-        <li>Exceeded targets, managed campaigns</li>
+        <li>Delivered market growth</li>
       </ul>
     </div>
-    <img class="illust-side" src="https://drawkit.com/static/media/ai-collaborators.b91593f0.svg" alt="Creative Collaboration Modern Illustration" />
-
+  </div>
+  <div id="skills" class="section">
+    <img class="illust" src="ai3.svg" alt="Tech Stack Illustration"/>
     <h2>Tech Stack & Skills</h2>
     <div class="badges">
-      <img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/Zapier-FF4A00?style=for-the-badge&logo=zapier&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/Google_Apps_Script-4285F4?style=for-the-badge&logo=google&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/AI_Tools-00D9FF?style=for-the-badge&logo=openai&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/BigQuery-669DF6?style=for-the-badge&logo=googlebigquery&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black&labelColor=000"/>
-      <img src="https://img.shields.io/badge/Google_Sheets-34A853?style=for-the-badge&logo=googlesheets&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black&labelColor=000"/>
-      <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/Freshdesk-00C9A7?style=for-the-badge&logo=freshworks&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/Exotel-FF6B35?style=for-the-badge&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/WATI-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=000"/>
-      <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white&labelColor=000"/>
+      <img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/Zapier-FF4A00?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/Google_Apps_Script-4285F4?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/AI_Tools-00D9FF?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/BigQuery-669DF6?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/Google_Sheets-34A853?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge"/>
     </div>
     <div class="skills-list">
-      <span>AI Automation</span>
-      <span>Leadership</span>
-      <span>CRM Integration</span>
-      <span>n8n, Zapier</span>
-      <span>Google Apps Script</span>
+      <span>AI Automation 🤖</span>
+      <span>Leadership 🚀</span>
+      <span>CRM Integration 💡</span>
+      <span>n8n, Zapier 🔗</span>
+      <span>Google Apps Script ✨</span>
       <span>Node.js, Python</span>
-      <span>Power BI, BigQuery</span>
-      <span>Netlify & GitHub</span>
+      <span>Power BI, BigQuery 📊</span>
+      <span>Netlify & GitHub 🧑‍💻</span>
     </div>
     <h2>Core Competencies</h2>
     <table class="competency-table">
-      <tr><th>AI & Technology</th><th>Sales & Leadership</th><th>Operations & Strategy</th></tr>
-      <tr><td>AI-Powered Automation</td><td>Team Management (60+)</td><td>Process Optimization</td></tr>
-      <tr><td>System Integration</td><td>Sales Campaigns</td><td>Business Scaling</td></tr>
-      <tr><td>Dashboards & Analytics</td><td>Performance Coaching</td><td>Partner Management (300+)</td></tr>
-      <tr><td>Workflow Automation</td><td>Market Expansion</td><td>KPI Delivery</td></tr>
-      <tr><td>Data Analytics</td><td>Revenue Growth</td><td>Cost Reduction</td></tr>
+      <tr>
+        <th>AI & Technology</th>
+        <th>Sales & Leadership</th>
+        <th>Operations & Strategy</th>
+      </tr>
+      <tr>
+        <td>AI Automation</td>
+        <td>Team Management</td>
+        <td>Process Optimization</td>
+      </tr>
+      <tr>
+        <td>System Integration</td>
+        <td>Sales Campaigns</td>
+        <td>Business Scaling</td>
+      </tr>
+      <tr>
+        <td>Dashboards & Analytics</td>
+        <td>Coaching</td>
+        <td>Partner Management</td>
+      </tr>
+      <tr>
+        <td>Workflow Automation</td>
+        <td>Market Expansion</td>
+        <td>KPI Delivery</td>
+      </tr>
+      <tr>
+        <td>Data Analytics</td>
+        <td>Revenue Growth</td>
+        <td>Cost Reduction</td>
+      </tr>
     </table>
-
+  </div>
+  <div id="projects" class="section">
+    <img class="illust" src="ai4.svg" alt="Project Illustration"/>
     <h2>Portfolio Projects</h2>
     <div class="projects-grid">
       <div class="project-box"><b>Exotel–Freshdesk AI Integration</b><br>Unified support; deployed in record time; automated ticket workflows.</div>
-      <div class="project-box"><b>Sales Automation Suite</b><br>Automated reporting; 60+ member team; performance analytics.</div>
-      <div class="project-box"><b>Franchise Scale System</b><br>Network 0 → 52+ partners; onboarding, training, activation.</div>
+      <div class="project-box"><b>Sales Automation Suite</b><br>Automated reporting and analytics for 60+ member team.</div>
+      <div class="project-box"><b>Franchise Scale System</b><br>Grew network 0 → 52+ partners; onboarding, training, activation.</div>
       <div class="project-box"><b>Retail Expansion Platform</b><br>250+ retailers; analytics, training, support flows.</div>
     </div>
-    <img class="illust-main" src="https://storyset.com/technology/computer-amico.svg" alt="Modern Tech Illustration" />
-
-    <h2>GitHub Analytics & Activity</h2>
+    <h2>GitHub Analytics</h2>
     <div class="github-imgs">
-      <img src="https://github-readme-stats.vercel.app/api?username=marieswar873-sys&show_icons=true&theme=default&hide_border=true&bg_color=f8fafc&title_color=11a2e0&icon_color=11a2e0&text_color=222&count_private=true&include_all_commits=true" alt="GitHub Stats"/>
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=marieswar873-sys&theme=default&hide_border=true&background=f8fafc&stroke=11a2e0&ring=11a2e0&fire=ffad24&currStreakLabel=11a2e0" alt="GitHub Streak Stats"/>
-      <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=marieswar873-sys&theme=default&utcOffset=5.5" alt="Productive Time"/>
+      <img src="https://github-readme-stats.vercel.app/api?username=marieswar873-sys&show_icons=true&theme=default&hide_border=true&bg_color=f8fafc&title_color=098ad9&icon_color=098ad9&text_color=222&count_private=true" alt="GitHub Stats"/>
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=marieswar873-sys&theme=default&hide_border=true&background=f8fafc&stroke=098ad9&ring=098ad9&fire=ffad24&currStreakLabel=098ad9" alt="GitHub Streak Stats"/>
     </div>
+  </div>
+  <div id="contact" class="section">
+    <img class="illust" src="ai5.svg" alt="Contact Illustration"/>
     <div class="contact-card">
       <h2>Contact</h2>
       <p>
-        Interested in working together or collaborating?<br>
+        Want to connect or collaborate? <span class="emojis">🤝✉️</span><br>
         <b>Email:</b> marieswar873@gmail.com<br>
         <b>WhatsApp:</b> +91-9500365660<br>
         <b>LinkedIn:</b> <a href="https://linkedin.com/in/marieswar873/" target="_blank">Mari Eswar</a>
       </p>
     </div>
-  </section>
+  </div>
   <footer>
-    Portfolio by Mari Eswar &copy; 2025 &middot; <a style="color:#11a2e0" href="mailto:marieswar873@gmail.com">Contact</a>
+    Portfolio by Mari Eswar &copy; 2025 · <a style="color:#098ad9" href="mailto:marieswar873@gmail.com">Contact</a>
+    <br>All illustrations and photos should be uploaded to your repo folder for best results!
   </footer>
+  <script>
+    function showSection(id){
+      document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+      document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      [...document.querySelectorAll('.nav-tab')].forEach(tab=>{if(tab.textContent.toLowerCase().includes(id))tab.classList.add('active')});
+    }
+  </script>
 </body>
 </html>
