@@ -4,139 +4,81 @@
   <meta charset="UTF-8" />
   <title>Mari Eswar | AI Operations Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0; background: #f8fafc; font-family: 'Fira Code', monospace; color: #21253a;
-      min-height: 100vh;
+      margin: 0; background: #f8fafc; font-family: 'Fira Code', monospace; color: #223; min-height: 100vh;
     }
-    .header {
-      padding: 42px 0 22px 0;
-      background: linear-gradient(100deg, #eaf9fc 0%, #fdf6fd 100%);
-      text-align: center;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    .main-title {
-      font-size: 2.85rem; font-weight: 700; letter-spacing: 1px; color: #0ba8d9; margin-bottom: 7px;
-      animation: fadeInDown 1.0s;
-    }
-    @keyframes fadeInDown {from{opacity:0;transform:translateY(-60px);}to{opacity:1;transform:translateY(0);}}
-    .subtitle { font-size: 1.2rem; color: #444; margin-bottom: 24px; }
+    .header {padding:46px 0 22px 0;background: linear-gradient(100deg,#eaf9fc 0%,#fdf6fd 100%);text-align:center;}
+    .main-title {font-size:3.1rem;font-weight:700;letter-spacing:1px;color:#11a2e0;margin-bottom:7px;}
+    .subtitle {font-size:1.18rem;color:#444;margin-bottom:23px;}
     .profile-links {
-      display: flex; justify-content: center; gap: 18px; margin-bottom: 20px; flex-wrap: wrap;
-      animation: fadeInUp 1.1s;
+      display:flex;justify-content:center;gap:18px;margin-bottom:21px;flex-wrap:wrap;
     }
-    @keyframes fadeInUp {from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
     .profile-links a {
-      padding: 10px 22px; border-radius: 7px; color: #fff; background: #0ba8d9; text-decoration: none;
-      font-size: 1.08rem; font-weight: 700; box-shadow: 0 2px 12px #b4e7f6b0; transition: 0.14s;
-      display: inline-flex; align-items: center; gap: 6px;
-      border: none;
+      padding:10px 22px;border-radius:8px;color:#fff;background:#11a2e0;text-decoration:none;font-size:1.07rem;
+      font-weight:700;box-shadow:0 2px 11px #b4e7f6c2;transition:.18s;display:inline-flex;align-items:center;gap:6px;
     }
-    .profile-links a:hover { background: #00bbf0; box-shadow: 0 2px 22px #31eaff77; color: #21253a;}
-    .header img.hero-illust {
-      margin-top: 18px;
-      height: 110px;
-      border-radius: 18px;
-      box-shadow: 0 0 20px #b4e7f67a;
-      background: #fff;
-      animation: sidefloat 4.5s infinite alternate ease-in-out;
-    }
-    @keyframes sidefloat {
-      0% {transform: translateY(0);}
-      100% {transform: translateY(-20px);}
-    }
-    section {
-      max-width: 980px;
-      margin: 45px auto 0 auto;
-      padding: 0 7vw;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 2px 28px #b4e7f666;
-      position: relative;
-    }
-    img.section-art, img.team-art {display:block;margin:36px auto 15px auto;max-width:380px;border-radius:14px;box-shadow:0 0 22px #e1ecfa;}
-    img.team-art { animation: floatIll 9s infinite alternate;}
-    @keyframes floatIll {
-        0% {transform: translateY(0);}
-        100% {transform: translateY(-17px);}
-    }
-    h2 { color: #0ba8d9; margin-top:38px;}
-    .core-list, .career-block ul {margin-left:25px;}
-    .skills-list { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 10px;}
-    .skills-list span {
-      background: #eaf9fc; color: #0ba8d9; border-radius: 7px; padding: 9px 19px;
-      font-size: 1rem; font-weight: 700; letter-spacing: 1px; box-shadow: 0 2px 12px #b4e7f645;
-      animation: popin 1s;
-    }
-    @keyframes popin { from{opacity:0;transform:scale(0.7);} to{opacity:1;transform:scale(1);}}
+    .profile-links a:hover {background:#30e0f4;color:#18253a;box-shadow:0 2px 24px #30e0f477;}
+    .header img.hero-illust {margin-bottom:12px;height:160px;max-width:100%;border-radius:22px;
+      box-shadow:0 0 22px #abebf7c2;background:#fff;animation:floatmain 6.5s infinite alternate;}
+    @keyframes floatmain {0%{transform:translateY(0);}100%{transform:translateY(-16px);}}
+    section {max-width:980px;margin:38px auto 0 auto;padding:0 6vw;background:#fff;border-radius:20px;
+      box-shadow:0 2px 27px #b4e7f666;position:relative;overflow:hidden;}
+    h2 {color:#11a2e0;margin-top:41px;}
+    .illust-main {display:block;margin:40px auto 14px auto;max-width:410px;border-radius:16px;
+      box-shadow:0 0 22px #cde3fa;animation:floatIll 8s infinite alternate;}
+    @keyframes floatIll {0%{transform:translateY(0);}100%{transform:translateY(-13px);}}
+    .illust-side {display:block;margin:35px auto 19px auto;max-width:290px;border-radius:11px;
+      box-shadow:0 0 16px #e1ecfa;}
+    .skills-list {display:flex;flex-wrap:wrap;gap:13px;margin-top:10px;}
+    .skills-list span {background:#eaf9fc;color:#11a2e0;border-radius:7px;padding:9px 19px;font-size:1rem;
+      font-weight:700;letter-spacing:1px;box-shadow:0 2px 11px #b4e7f645;transition:.16s;}
+    .skills-list span:hover {background:#30e0f4;color:#18253a;}
     .badges {display:flex;gap:8px;margin:15px 0;}
     .badges img{height:32px;}
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 17px; margin-top: 9px;}
-    .project-box { background: #f5fafd; border-radius: 10px; box-shadow: 0 2px 8px #b4e7f645;
-      padding: 16px 13px; color: #262f32; min-height: 90px;}
-    .career-block { background: #f8fafd; border-radius: 13px; box-shadow: 0 2px 12px #b4e7f645;
-      padding: 17px 14px; margin-bottom: 13px; }
-    .career-block h3 { color: #0ba8d9; margin-bottom: 7px; }
-    .competency-table {
-      width: 100%; margin: 14px 0; border-collapse: collapse;
-      background: #f3fbfe; border-radius: 10px; box-shadow: 0 2px 8px #b4e7f645;
-    }
-    .competency-table th, .competency-table td {
-      padding: 7px 10px; border-bottom: 1px solid #eaf9fc; color: #0ba8d9; text-align: center; font-size: 1.03rem;
-    }
-    .competency-table th { background: #eaf9fc;}
-    .competency-table tr:last-child td { border-bottom: none; }
-    .github-imgs { display: flex; gap: 8px; justify-content: center; margin-top: 10px; margin-bottom: 19px;}
-    .github-imgs img { border-radius: 12px; background: #fff; box-shadow: 0 2px 16px #b4e7f645; height: 90px;}
-    /* animated pointer */
-    .pointer {
-      position: absolute; right: 36px; top: 24px;
-      animation: pointermove 1.1s infinite alternate;
-      height: 34px; z-index:2;
-    }
-    @keyframes pointermove {0%{transform:translateY(0);}100%{transform:translateY(-12px);}}
-    /* extra creative */
-    .contact-card {background:#eaf9fc;border-radius:15px;box-shadow:0 2px 14px #31eaff14;padding:15px 18px;margin:36px 0 0 0;}
-    footer {
-      text-align: center; background: #f5fafd; padding: 24px 0 14px 0; color: #0ba8d9;
-      font-size: 1.08rem; border-top: 1px solid #e0e0e0; margin-top: 28px; letter-spacing: 1px;}
-    @media (max-width: 840px) {
-      section { padding: 12px 2vw;}
-      .profile-links { flex-direction: column; gap: 10px;}
-      .header img.hero-illust {height:65px;}
-      .github-imgs img { height: 60px;}
-      .pointer { display:none;}
+    .projects-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px;margin-top:9px;}
+    .project-box {background:#f5fafd;border-radius:11px;box-shadow:0 2px 8px #b4e7f645;padding:14px 13px;color:#262f32;min-height:85px;}
+    .career-block {background:#f8fafd;border-radius:13px;box-shadow:0 2px 12px #b4e7f645;padding:17px 14px;margin-bottom:11px; }
+    .career-block h3 {color:#11a2e0;margin-bottom:7px;}
+    .competency-table {width:100%;margin:14px 0;border-collapse:collapse;background:#f3fbfe;border-radius:10px;box-shadow:0 2px 8px #b4e7f645;}
+    .competency-table th,.competency-table td {padding:7px 10px;border-bottom:1px solid #eaf9fc;color:#11a2e0;text-align:center;font-size:1.03rem;}
+    .competency-table th {background:#eaf9fc;}
+    .competency-table tr:last-child td {border-bottom:none;}
+    .github-imgs {display:flex;gap:8px;justify-content:center;margin-top:10px;margin-bottom:19px;}
+    .github-imgs img {border-radius:12px;background:#fff;box-shadow:0 2px 16px #b4e7f645;height:90px;}
+    .contact-card {background:#eaf9fc;border-radius:15px;box-shadow:0 2px 14px #30e0f418;padding:15px 18px;margin:37px 0 0 0;}
+    footer {text-align:center;background:#f5fafd;padding:22px 0 11px 0;color:#11a2e0;font-size:1.07rem;border-top:1px solid #e0e0e0;margin-top:23px;}
+    @media (max-width:840px) {
+      section {padding:12px 2vw;}
+      .profile-links {flex-direction:column;gap:10px;}
+      .header img.hero-illust {height:80px;}
+      .github-imgs img {height:60px;}
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <img class="hero-illust" src="https://cdn.pixabay.com/photo/2023/01/23/17/34/artificial-intelligence-7739435_1280.png" alt="AI Portfolio Art" />
+    <!-- Modern interactive AI illustration from storyset.com -->
+    <img class="hero-illust" src="https://storyset.com/technology/technology-amico.svg" alt="AI Portfolio Interactive Hero" />
     <div class="main-title">Mari Eswar</div>
-    <div class="subtitle">
-      AI Operations | Sales Leadership | Automation | Data Analytics
-    </div>
+    <div class="subtitle">AI Operations | Sales Leadership | Automation | Data Analytics</div>
     <div class="profile-links">
       <a href="https://linkedin.com/in/marieswar873" target="_blank">LinkedIn</a>
       <a href="mailto:marieswar873@gmail.com" target="_blank">Email</a>
       <a href="https://github.com/marieswar873-sys" target="_blank">GitHub</a>
       <a href="https://wa.me/919500365660" target="_blank">WhatsApp</a>
     </div>
-    <img class="pointer" src="https://img.icons8.com/color/48/000000/hand-cursor.png" alt="Scroll Down">
   </div>
 
   <section>
-    <img class="section-art" src="https://cdn.pixabay.com/photo/2020/07/13/07/48/ai-5396986_1280.png" alt="AI Team Illustration" />
+    <img class="illust-main" src="https://storyset.com/technology/artificial-intelligence-amico.svg" alt="AI Team Interactive Illustration" />
 
     <h2>About Me</h2>
     <p>
       Senior Operations Manager at Lokal, Bangalore.<br>
-      AI-powered automation, business scaling, and analytics.<br>
-      <b>Focus Areas:</b> AI Automation, Sales Leadership & Team Building, Business Growth, Data Analytics, Operational Excellence<br>
-      <b>Specialization:</b> AI/ML Solutions, Sales Strategy, Workflow Automation, Revenue Growth, High-Performance Team Leadership
-      <br>
+      AI-powered automation, business scaling, analytics.<br>
+      <b>Specialization:</b> AI/ML Solutions, Sales Strategy, Workflow Automation, Revenue Growth, Team Leadership<br>
       <b>Philosophy:</b>
       <em>"Leveraging AI to transform operations,<br>
       Leading teams to exceed sales targets,<br>
@@ -157,12 +99,10 @@
       <ul>
         <li>Led 60+ sales professionals; 300+ active partners</li>
         <li>Award: Best Team Leader (Airtel)</li>
-        <li>Managed retail operations</li>
-        <li>Market expansion across regions</li>
+        <li>Managed retail operations & market expansion</li>
       </ul>
     </div>
     <div class="badges">
-      <!-- Example: Professional badges -->
       <img src="https://img.shields.io/badge/%F0%9F%93%8D_Location-Bengaluru,_India-FF6B6B?style=for-the-badge&labelColor=1a1a1a"/>
       <img src="https://img.shields.io/badge/%F0%9F%92%BC_CTC-%E2%82%B98.7L_%E2%86%92_%E2%82%B913L-4CAF50?style=for-the-badge&labelColor=1a1a1a"/>
       <img src="https://img.shields.io/badge/%F0%9F%93%85_Notice-60_Days-FFA726?style=for-the-badge&labelColor=1a1a1a"/>
@@ -170,57 +110,49 @@
 
     <h2>Professional Journey</h2>
     <div class="career-block">
-      <h3>LOKAL - Senior Operations Manager <small>(Sep 2025 - Present)</small></h3>
+      <h3>LOKAL - Senior Operations Manager (Sep 2025 - Present)</h3>
       <ul>
         <li>Deployed Exotel IVR-Freshdesk integration in 3 DAYS</li>
-        <li>Designed AI-powered real-time dashboards</li>
-        <li>Built automated grievance tracking</li>
-        <li>Implemented unified AI-driven ticketing (Astro, Eaze, Gyan TV)</li>
+        <li>Designed AI-powered dashboards</li>
+        <li>Automated grievance tracking</li>
+        <li>AI-driven ticketing (Astro, Eaze, Gyan TV)</li>
         <li>Achieved 80%+ reduction in implementation time</li>
-        <li>Managed cross-functional teams</li>
-        <li>Drove cost reduction via automation</li>
-        <li>Managed business partnerships and client onboarding</li>
+        <li>Managed cross-teams, cost reduction</li>
+        <li>Managed partnerships & onboarding</li>
       </ul>
     </div>
     <div class="career-block">
-      <h3>LOKAL - Operations Manager <small>(Sep 2024 - Sep 2025)</small></h3>
+      <h3>LOKAL - Operations Manager (Sep 2024 - Sep 2025)</h3>
       <ul>
-        <li>Onboarded new business partners with seamless activation</li>
+        <li>Onboarded partners with seamless activation</li>
         <li>Automated sales reporting & follow-ups</li>
-        <li>Supported cross-team collaboration & KPI delivery</li>
+        <li>Supported collaboration & KPI delivery</li>
       </ul>
     </div>
     <div class="career-block">
-      <h3>TUMBLEDRY - Franchise Partner Manager <small>(Aug 2023 - Sep 2024)</small></h3>
+      <h3>TUMBLEDRY - Franchise Partner Manager (Aug 2023 - Sep 2024)</h3>
       <ul>
-        <li>Scaled franchise network from 0 → 52+ active partners</li>
-        <li>Led high-performing sales team; executed expansion</li>
-        <li>Implemented targeted campaigns; opened new territories</li>
-        <li>Designed training; mentored team; analysed data</li>
-        <li>Built partner relationships and accountability metrics</li>
+        <li>Scaled franchise network from 0 → 52+</li>
+        <li>Led team, executed expansion strategies</li>
+        <li>Implemented campaigns, training, analytics</li>
       </ul>
     </div>
     <div class="career-block">
-      <h3>JIO - Jio Point Manager <small>(Aug 2022 - Aug 2023)</small></h3>
+      <h3>JIO - Jio Point Manager (Aug 2022 - Aug 2023)</h3>
       <ul>
-        <li>Managed operations for 250+ retail partners</li>
-        <li>Led sales, distribution & market expansion</li>
-        <li>Onboarded retailers with training & support</li>
-        <li>Coordinated two distribution channels</li>
-        <li>Drove network performance & revenue growth</li>
+        <li>Managed 250+ retail partners</li>
+        <li>Led sales, distribution</li>
       </ul>
     </div>
     <div class="career-block">
-      <h3>AIRTEL - Sales Team Lead <small>(Mar 2021 - Aug 2022)</small></h3>
+      <h3>AIRTEL - Sales Team Lead (Mar 2021 - Aug 2022)</h3>
       <ul>
         <li>Led 60 freelancers + 150 retailers</li>
-        <li>Coordinated sales campaigns & market growth</li>
-        <li>Conducted training & engagement</li>
-        <li>Best Team Leader of the Year; Exceeded targets</li>
+        <li>Best Team Leader of the Year</li>
+        <li>Exceeded targets, managed campaigns</li>
       </ul>
     </div>
-
-    <img class="team-art" src="https://undraw.co/illustrations/svg/undraw_team_collaboration_re_5b43.svg" alt="Team Collaboration Art" />
+    <img class="illust-side" src="https://drawkit.com/static/media/ai-collaborators.b91593f0.svg" alt="Creative Collaboration Modern Illustration" />
 
     <h2>Tech Stack & Skills</h2>
     <div class="badges">
@@ -256,7 +188,6 @@
       <span>Power BI, BigQuery</span>
       <span>Netlify & GitHub</span>
     </div>
-
     <h2>Core Competencies</h2>
     <table class="competency-table">
       <tr><th>AI & Technology</th><th>Sales & Leadership</th><th>Operations & Strategy</th></tr>
@@ -274,20 +205,18 @@
       <div class="project-box"><b>Franchise Scale System</b><br>Network 0 → 52+ partners; onboarding, training, activation.</div>
       <div class="project-box"><b>Retail Expansion Platform</b><br>250+ retailers; analytics, training, support flows.</div>
     </div>
-
-    <img class="section-art" src="https://cdn.pixabay.com/photo/2019/04/10/12/32/artificial-intelligence-4111582_1280.jpg" alt="Creative AI Art" />
+    <img class="illust-main" src="https://storyset.com/technology/computer-amico.svg" alt="Modern Tech Illustration" />
 
     <h2>GitHub Analytics & Activity</h2>
     <div class="github-imgs">
-      <img src="https://github-readme-stats.vercel.app/api?username=marieswar873-sys&show_icons=true&theme=default&hide_border=true&bg_color=f8fafc&title_color=0ba8d9&icon_color=0ba8d9&text_color=222&count_private=true&include_all_commits=true" alt="GitHub Stats"/>
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=marieswar873-sys&theme=default&hide_border=true&background=f8fafc&stroke=0ba8d9&ring=0ba8d9&fire=ffad24&currStreakLabel=0ba8d9" alt="GitHub Streak Stats"/>
+      <img src="https://github-readme-stats.vercel.app/api?username=marieswar873-sys&show_icons=true&theme=default&hide_border=true&bg_color=f8fafc&title_color=11a2e0&icon_color=11a2e0&text_color=222&count_private=true&include_all_commits=true" alt="GitHub Stats"/>
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=marieswar873-sys&theme=default&hide_border=true&background=f8fafc&stroke=11a2e0&ring=11a2e0&fire=ffad24&currStreakLabel=11a2e0" alt="GitHub Streak Stats"/>
       <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=marieswar873-sys&theme=default&utcOffset=5.5" alt="Productive Time"/>
     </div>
-
     <div class="contact-card">
       <h2>Contact</h2>
       <p>
-        Interested in working together, collaborating or have a project/idea?<br>
+        Interested in working together or collaborating?<br>
         <b>Email:</b> marieswar873@gmail.com<br>
         <b>WhatsApp:</b> +91-9500365660<br>
         <b>LinkedIn:</b> <a href="https://linkedin.com/in/marieswar873/" target="_blank">Mari Eswar</a>
@@ -295,7 +224,7 @@
     </div>
   </section>
   <footer>
-    Portfolio by Mari Eswar &copy; 2025 &middot; <a style="color:#00bbf0" href="mailto:marieswar873@gmail.com">Contact</a>
+    Portfolio by Mari Eswar &copy; 2025 &middot; <a style="color:#11a2e0" href="mailto:marieswar873@gmail.com">Contact</a>
   </footer>
 </body>
 </html>
